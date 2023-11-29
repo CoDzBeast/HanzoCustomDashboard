@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Dashboard</title>
+
+    <!-- Chart.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+<div class="container-fluid dashboard">
+    <header class="dashboard-header">
+        <h1>Executive Time Tracker</h1>
+    </header>
+
+    <div class="action-buttons">
+        <a href="import.html" class="btn btn-outline-light">Comparison Modal</a>
+        <button id="captureScreenshot" class="btn btn-light">Capture Screenshot</button>
+        <button id="saveData" class="btn btn-light">Save Today's Data</button>
+    </div>
+
+    <main id="mainContainer">
+        <aside id="metricsContainer">
+            <p class="text-center" style="color: #ffffff; font-weight: 600;">Metrics Based on Today's Data Only</p>
+            
+            <!-- Highest Quantity Check-In -->
+            <div class="metric-card">
+                <h4><i class="fas fa-sort-amount-up"></i> Highest Quantity Checked-In</h4>
+                <p id="highestQuantityCheckIn">Loading...</p>
+            </div>
+
+            <!-- Most Breaks Taken -->
+            <div class="metric-card">
+                <h4><i class="fas fa-coffee"></i> Most Breaks Taken</h4>
+                <p id="mostBreaksTaken">Loading...</p>
+            </div>
+
+            <!-- Highest Average Per Hour -->
+            <div class="metric-card">
+                <h4><i class="fas fa-clock"></i> Highest Average Per Hour</h4>
+                <p id="highestAveragePerHour">Loading...</p>
+            </div>
+        </aside>
+        
+        <section id="results">
+            <!-- Chart Container -->
+            <div id="chartContainer" class="chart-style">
+                <canvas id="chartCanvas"></canvas>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Bootstrap JS and its dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your dashboard.js script -->
+<script src="dashboard.js"></script>
+</body>
+</html>

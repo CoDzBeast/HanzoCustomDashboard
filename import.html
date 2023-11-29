@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import and Compare</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body style="height: 100%; font-family: 'Open Sans', sans-serif; background-color: #1a1a2e; color: #e0e0e0;">
+
+<div class="dashboard" style="height: 100%; padding: 2% 5%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div class="dashboard-header" style="width: 80%; text-align: center; margin-bottom: 2rem; border-bottom: 2px solid #e0e0e0; padding-bottom: 1rem;">
+        <h1>Import and Compare Data</h1>
+    </div>
+    <div class="action-buttons" style="display: flex; justify-content: center; gap: 1rem; width: 80%; margin-bottom: 2rem;">
+        <input type="file" id="fileInput" multiple>
+        <button id="importButton" class="btn btn-primary mt-2" style="border: 2px solid #e0e0e0; padding: 0.5rem 1rem; background: linear-gradient(145deg, #1a1a2e, #33334d); box-shadow: 5px 5px 10px #0e0e1a, -5px -5px 10px #26263c; color: #e0e0e0;">Import and Compare</button>
+        <a href="dashboard.html" class="btn btn-secondary mt-2" style="border: 2px solid #e0e0e0; padding: 0.5rem 1rem; background: linear-gradient(145deg, #1a1a2e, #33334d); box-shadow: 5px 5px 10px #0e0e1a, -5px -5px 10px #26263c; color: #e0e0e0;">Back to Dashboard</a>
+    </div>
+</div>
+
+<!-- Modal for comparison -->
+<!-- Modal for comparison -->
+<div class="modal fade" id="comparisonModal" tabindex="-1" role="dialog" aria-labelledby="comparisonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="background-color: #2a2a3e; color: #e0e0e0; border: none;">
+      <div class="modal-header" style="border-bottom: 1px solid #e0e0e0;">
+        <h5 class="modal-title" id="comparisonModalLabel">Data Comparison</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #e0e0e0;">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body" id="comparisonContent" style="background-color: #33334d; padding: 1rem; border-radius: 5px; overflow-y: auto;">
+        <table class="table table-bordered mt-4" style="color: #ffffff;">
+          <thead>
+              <tr>
+                  <th style="color: #ffffff !important;">Name</th>
+                  <th style="color: #ffffff !important;">Average Per Hour</th>
+                  <th style="color: #ffffff !important;">Total Quantity</th>
+                  <th style="color: #ffffff !important;">Breaks</th>
+              </tr>
+          </thead>
+          <tbody style="color: #ffffff;">
+              <!-- Your table rows here -->
+          </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <!-- Continue with the rest of your modal content, adjusting colors as needed -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Bootstrap JS and its dependencies -->
+<!-- Use the full version of jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your import.js script -->
+<script src="import.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Time Tracker WIP",
+  "version": "1.0",
+  "description": "Tracks time gaps, total amount, and average per hour.",
+  "permissions": [
+      "activeTab",
+      "<all_urls>",
+      "tabs",
+      "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-inline' https://code.jquery.com https://cdn.jsdelivr.net https://maxcdn.bootstrapcdn.com; object-src 'self';",
+  "externally_connectable": {
+    "matches": ["<all_urls>"]
+  },
+  "web_accessible_resources": ["fetchData"]
+}
